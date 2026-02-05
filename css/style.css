@@ -937,4 +937,100 @@ body {
     height: 56px;
   }
 }
+/* =========================
+   FIX GLOBAL MOBILE (CRÍTICO)
+   igual al eneka-web antiguo
+========================= */
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
+/* evita que flex empuje contenido */
+* {
+  box-sizing: border-box;
+}
+
+/* contenedor principal */
+.main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+/* layouts de producto */
+.product-layout {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* columnas */
+.product-layout > div {
+  min-width: 0;
+}
+
+/* imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* galería */
+.gallery-wrapper {
+  overflow: hidden;
+}
+
+/* =========================
+   FAB (WhatsApp / IG / TikTok)
+========================= */
+
+.fab-container {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.fab {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fab img {
+  width: 28px;
+  height: 28px;
+}
+
+/* =========================
+   MÓVIL
+========================= */
+@media (max-width: 768px) {
+
+  .product-layout {
+    flex-direction: column;
+  }
+
+  .gallery-wrapper,
+  .lifestyle-images {
+    width: 100%;
+  }
+
+  .thumbs {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+}
+
 
