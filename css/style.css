@@ -894,3 +894,47 @@ body {
     height: 26px !important;
   }
 }
+/* =========================
+   FIX TAMAÑO IMÁGENES PRODUCTO
+   (PC + MÓVIL)
+========================= */
+
+/* imagen principal */
+.main-image img,
+[data-main] {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100%;
+  display: block;
+}
+
+/* miniaturas */
+.thumbs img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+
+/* lifestyle */
+.lifestyle-images img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* evitar que flex las achique */
+.gallery-wrapper,
+.main-image,
+.product-layout > div {
+  min-width: 0;
+}
+
+/* móvil */
+@media (max-width: 768px) {
+  .thumbs img {
+    width: 56px;
+    height: 56px;
+  }
+}
+
