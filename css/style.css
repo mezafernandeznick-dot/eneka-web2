@@ -561,39 +561,97 @@ body {
 }
 
 /* Mobile */
+/* =====================================
+   MOBILE – MISMO COMPORTAMIENTO QUE ENEKA-WEB
+===================================== */
 @media (max-width: 768px) {
+
+  body, html {
+    overflow-x: hidden;
+  }
+
+  .main {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* 👉 colapsa a 1 columna */
   .product-layout {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    display: block !important;
+    width: 100% !important;
   }
 
-  .gallery-wrapper {
-    flex-direction: column;
-    align-items: center;
+  .product-layout > div {
+    width: 100% !important;
   }
 
+  /* 👉 imágenes NUNCA se salen */
+  .main-image {
+    width: 100% !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+
+  .main-image img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  /* 👉 miniaturas tipo carrusel */
   .thumbs {
-    flex-direction: row;
-    max-height: none;
-    overflow-x: auto;
-    overflow-y: hidden;
+    display: flex !important;
+    overflow-x: auto !important;
+    gap: 8px;
   }
 
   .thumbs img {
-    width: 56px;
-    height: 56px;
+    width: 70px !important;
+    height: auto !important;
+    flex: 0 0 auto;
   }
 
+  /* 👉 lifestyle como en el proyecto viejo */
   .lifestyle-images {
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+    display: flex !important;
+    overflow-x: auto !important;
+    gap: 10px;
   }
 
   .lifestyle-images img {
-    width: 100%;
-    max-width: 160px;
+    width: 90% !important;
+    flex: 0 0 auto;
+    border-radius: 12px;
+  }
+
+  /* 👉 info del producto */
+  .product-info {
+    padding: 16px 12px;
+  }
+
+  /* 👉 ICONOS flotantes (igual que antes) */
+  .fab-container {
+    position: fixed;
+    right: 16px;
+    bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 9999;
+  }
+
+  .fab {
+    width: 48px;
+    height: 48px;
+  }
+
+  .fab img {
+    width: 26px;
+    height: 26px;
   }
 }
+
 /* ===== NORMALIZAR IMÁGENES DE PRODUCTO ===== */
 
 /* Lifestyle (3 imágenes superiores) */
